@@ -6,6 +6,14 @@ edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[[bench]]
+name = "bench"
+harness = false
+
 [dependencies]
 rand = "0.7"
 uint = "0.8"
+num-bigint = { version = "0.3", features = ["rand"] }
+
+[dev-dependencies]
+criterion = "0.3"
